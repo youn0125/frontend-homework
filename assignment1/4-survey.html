@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<form>
+  <fieldset>
+    <legend>CS 430P/510 - Intro Survey</legend>
+    
+    <p>
+      <div>
+        <label> Name:</label>
+        <input type="text" name="name"><br>
+        <label> Email:</label>
+        <input type="text" name="email">
+      </div>
+    </p>
+
+    <p>
+      <div>
+        <label> Registration Status</label>
+        <select>
+          <option value="registered"> Registered</option>
+          <option value="waitlist"> Waitlist</option>
+          <option value="other"> Other</option>
+        </select>
+      </div>
+    </p>  
+    <p>
+      <div>
+        <label> Class Section</label><br>
+        <input type="radio" id="410P" name="classSection" value="410P"> 
+        <label for="410P">410P</label>
+        <input type="radio" id="510" name="classSection" value="510">
+        <label for="510">510</label>
+      </div>
+    </p>
+    <p>
+      <div>
+        <label> Have you taken any of these courses?</label><br>
+        <input type="checkbox" id="programmingLanguages" name="programmingLanguages"> 
+        <label for="programmingLanguages">Programming Languages</label><br>
+        <input type="checkbox" id="operatingSystems" name="operatingSystems" checked>
+        <label for="operatingSystems">Operating Systems</label><br>
+        <input type="checkbox" id="fullStackWebDev" name="fullStackWebDev" checked>
+        <label for="fullStackWebDev"> Full Stack Web Development</label><br>
+        <input type="checkbox" id="softwareEngineering" name="softwareEngineering">
+        <label for="softwareEngineering"> Software Engineering</label><br>
+      </div>
+    </p>
+    <p>
+      <div>
+        <label> What would you like to learn and accomplish in this class?</label><br>
+        <textarea rows="4" cols="30"></textarea>
+      </div>
+    </p>
+    <p>
+      <div>
+        <label> Do you have any project ideas?</label><br>
+        <textarea rows="4" cols="30"></textarea>
+      </div>
+    </p>
+    <p>
+      <div>
+        <input type="checkbox">I already have a group for the final project
+      </div>
+    </p>
+    <p>
+      <div>
+        <input type="submit">
+        <input type="button" value="Reset">
+      </div>
+    </p>
+  </fieldset>
+</form>
+
+</body>
+</html>
