@@ -1,0 +1,36 @@
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 10px;
+  overflow: hidden;
+  border: 1px solid black;
+}
+
+li {
+  float: left;
+  width: 20%;
+}
+
+li a {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  display: block;
+  font-size: 20px;
+  color: teal;
+  text-align: center;
+  padding: 8px;
+  text-decoration: none;
+}
+
+/* Change the link color to #111 (black) on hover */
+li a:hover, a:focus {
+  color: teal;
+  bottom:0px; /*Change this to increase/decrease distance*/
+  border-bottom: 10px solid #008080;
+}
+
+.active a {
+  color: #8D2BBA;
+  bottom:0px; /*Change this to increase/decrease distance*/
+  border-bottom: 10px solid #8D2BBA;
+}     
