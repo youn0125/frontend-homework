@@ -1,24 +1,26 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <link rel="stylesheet" href="2-navbar.css">
+  <link rel="stylesheet" href="4-survey.css">
 </head>
 <body>
 
 <form>
   <fieldset>
     <div id="fieldset">
-      <div id="title">CS 410P/510 - Intro Survey</div>
-
-      <div class="text">
-        <label class="labeltext"> Name</label>
-        <input type="text" name="name"><br>
-      </div>
-      <div class="text">
-        <label class="labeltext"> Email</label>
-        <input type="text" name="email">
-      </div>
-
+      <div id="title"><h1>CS 410P/510 - Intro Survey</h1></div>
+      <p>
+        <div class="text">
+          <label for="name" class="labeltext"> Name</label>
+          <input role="textbox" type="text" name="name">
+        </div>
+      </p>
+      <p>
+        <div class="text">
+          <label for="email" class="labeltext"> Email</label>
+          <input role="textbox" type="text" name="email">
+        </div>
+      </p>
       <p>
         <div>
           <label class="labelnotText"> Registration Status:</label>
@@ -30,35 +32,35 @@
         </div>
       </p>  
       <p>
-        <div>
-          <label class="labelnotText"> Class Section</label>
+        <div role="menuitemradio">
+          <label for="classSection" class="labelnotText"> Class Section:</label>
           <input type="radio" id="410P" name="classSection" value="410P"> CS 410P
           <input type="radio" id="510" name="classSection" value="510"> CS 510
         </div>
       </p>
       <p>
         <div>
-          <label class="labelnotText"> Have you taken any of these courses?</label>
-          <input type="checkbox" id="programmingLanguages" name="programmingLanguages"> Programming Languages <br>
-          <input type="checkbox" id="operatingSystems" name="operatingSystems" checked> Operating Systems<br>
-          <input type="checkbox" id="fullStackWebDev" name="fullStackWebDev" checked> Full Stack Web Development<br>
+          <label for="programmingLanguages" class="labelnotText"> Have you taken any of these courses?</label>
+          <span role="menuitemcheckbox" aria-checked="false"><input type="checkbox" id="programmingLanguages" name="programmingLanguages"> Programming Languages </span><br>
+          <span role="menuitemcheckbox" aria-checked="true"><input type="checkbox" id="operatingSystems" name="operatingSystems" checked> Operating Systems</span><br>
+          <span role="menuitemcheckbox" aria-checked="true"><input type="checkbox" id="fullStackWebDev" name="fullStackWebDev" checked> Full Stack Web Development</span><br>
         </div>
       </p>
       <p>
         <div>
           <label class="labelnotText"> What would you like to learn and accomplish in this class?</label>
-          <textarea rows="4" cols="90%"></textarea>
+          <textarea rows="4" cols="93"></textarea>
         </div>
       </p>
       <p>
         <div>
           <label class="labelnotText"> Do you have any project ideas?</label>
-          <textarea rows="4" cols="90%"></textarea>
+          <textarea rows="4" cols="93"></textarea>
         </div>
       </p>
       <p>
         <div>
-          <input type="checkbox" checked>I already have a group for the final project
+          <span role="menuitemcheckbox" aria-checked="true"><input type="checkbox" checked>I already have a group for the final project</span>
         </div>
       </p>
       <p>

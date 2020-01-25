@@ -8,7 +8,6 @@ form {
 #title {
   color: #0173a0;
   font-weight: bold;
-  font-size: 1.7em;
   text-align: center;
   margin: 20px;
 }
@@ -27,7 +26,11 @@ form {
 }
 
 input[type=text] {
-    width: 80%;
+    width: 77%;
+}
+
+textarea {
+    width: 90%;
 }
 
 .button {
