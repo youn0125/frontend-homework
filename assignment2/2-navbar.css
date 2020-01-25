@@ -3,27 +3,28 @@ ul {
   margin: 0;
   padding: 0;
   overflow: hidden;
-  background-color: #333;
+  background-color: #023536;
+  width: 1150px;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 li {
-  float: left;
-  
+    float: left;
 }
 
 li a {
   display: block;
   color: white;
   text-align: center;
-  padding: 14px 90px;
+  padding: 14px 85px;
   text-decoration: none;
 }
 
 /* Change the link color to #111 (black) on hover */
 li a:hover, a:focus {
-  background-color: #111;
+  background-color: green;
 }
 
 .active {
-  background-color: green;      
+  background-color: #008083;      
 }
