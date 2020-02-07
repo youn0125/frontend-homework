@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <link rel = "stylesheet" type = "text/css" href = "https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap.min.css"/>
+  <script type = "text/javascript" src = "https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<div class="container">
+  <br><h2 class="text-center">CS 410/510 - INTRO SURVEY</h2><br>
+  <form>
+    <div class="form-group row">
+    <label for="inputName" class="font-weight-bold col-sm-2 col-form-label">Name</label>
+      <div class="col-sm-10">
+        <input type="text" class="form-control" id="inputName" placeholder="">
+      </div>
+    </div>
+    <div class="form-group row">
+      <label for="inputEmail3" class="font-weight-bold col-sm-2 col-form-label">Email</label>
+      <div class="col-sm-10">
+        <input type="email" class="form-control" id="inputEmail3" placeholder="Email">
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="registerStatus" class="font-weight-bold col-form-label">Registration status:</label>
+      <select class="custom-select" id="registerStatus">
+        <option selected>Open this select menu</option>
+        <option value="1">One</option>
+        <option value="2">Two</option>
+        <option value="3">Three</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label for="classSection" class="font-weight-bold col-form-label">Class Section:</label><br>
+      <div class="form-check form-check-inline">
+        <input class="form-check-input" type="radio" name="radios" id="radios1" value="option1">
+        <label class="form-check-label" for="radios1">CS 410P</label>
+      </div>
+      <div class="form-check form-check-inline">
+        <input class="form-check-input" type="radio" name="radios" id="radios2" value="option2">
+        <label class="form-check-label" for="radios2">CS 510</label>
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="classSection" class="font-weight-bold col-form-label">
+        Have you taken any of these courses?
+      </label>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" value="" id="check1">
+        <label class="form-check-label" for="check1">
+          Programming Languages
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" value="" id="check2" checked>
+        <label class="form-check-label" for="check2">
+          Operating Systems
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" value="" id="check3" checked>
+        <label class="form-check-label" for="check3">
+          Full Stack Web Development
+        </label>
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="font-weight-bold" for="textarea1">
+        What would you like to learn and accomplish in this class?
+      </label>
+      <textarea class="form-control" id="textarea1" rows="3"></textarea>
+    </div>
+    <div class="form-group">
+      <label class="font-weight-bold" for="textarea2">
+        Do you have any project ideas?
+      </label>
+      <textarea class="form-control" id="textarea2" rows="3"></textarea>
+    </div>
+    <div class="form-group">
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" value="" id="check4" checked>
+        <label class="form-check-label" for="check4">
+          I already have a group
+        </label>
+      </div>
+    </div>
+    <div class="form-group">
+      <div class="form-check form-check-inline">
+        <button type="submit" class="form-check-input btn btn-primary">Submit</button>
+      </div>
+      <div class="form-check form-check-inline">
+        <button type="submit" class="form-check-input btn btn-secondary">Reset</button>
+      </div>
+    </div>
+  </form>
+</div>
+  
+</body>
+</html>
