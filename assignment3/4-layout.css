@@ -1,0 +1,52 @@
+* {
+  font-family:sans-serif;
+  font-size:1.4em;
+}
+.container {
+  height:350px;
+  width:800px;
+  display:flex;
+  flex-wrap:wrap; 
+  flex-direction: column;
+  justify-content:flex-end;
+  align-content:flex-start;
+}
+.box {
+  width:200px;
+  height:100px;
+  font-size:0.8em;
+  margin:5px 15px;
+  padding:2px;
+  background-color: purple;
+  color: white;
+}
+.box1 {
+  order: 3; /* default is 0 */
+}
+.box2 {
+  order: 4; /* default is 0 */
+}
+.box3 {
+  order: 5; /* default is 0 */
+}
+.box4 {
+  order: 6; /* default is 0 */
+}
+.box5 {
+  order: 2; /* default is 0 */
+}
+.box6 {
+  order: 7; /* default is 0 */
+}
+.box7 {
+  order: 8; /* default is 0 */
+}
+.box8 {
+  order: 1; /* default is 0 */
+}
+.box9 {
+  order: 9; /* default is 0 */
+}
+.box10 {
+  order: 10; /* default is 0 */
+}
