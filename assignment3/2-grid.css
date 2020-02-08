@@ -1,0 +1,19 @@
+.row1 {
+  background-color:purple; 
+  color:white;
+}
+.row2 {
+  background-color:green; 
+  color:white;
+}
+.row3 {
+  background-color:darkorange; 
+  color:white;
+}
+.row4 {
+  background-color:darkcyan; 
+  color:white;
+}
+.col {
+  height:100px;
+}
