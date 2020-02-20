@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <link rel = "stylesheet" type = "text/css" href = "https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap.min.css"/>
+  <script type = "text/javascript" src = "https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<div class="container">
+  <br><h2 class="text-center">CS 410/510 - INTRO SURVEY</h2><br>
+  <form class="needs-validation" novalidate>
+    <div class="form-group row">
+    <label for="validation-inputName" class="font-weight-bold col-sm-2 col-form-label">Name</label>
+      <div class="col-sm-10">
+        <input type="text" class="form-control" id="validation-inputName" placeholder="" required>
+      </div>
+    </div>
+    <div class="form-group row">
+      <label for="validation-inputEmail3" class="font-weight-bold col-sm-2 col-form-label">Email</label>
+      <div class="col-sm-10">
+        <input type="email" class="form-control" id="validation-inputEmail3" placeholder="Email" required>
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="validation-registerStatus" class="font-weight-bold col-form-label">Registration status:</label>
+      <select class="custom-select" id="validation-registerStatus" required>
+        <option selected>Registered</option>
+        <option value="1">Waitlist</option>
+        <option value="2">Other</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label for="classSection" class="font-weight-bold col-form-label">Class Section:</label><br>
+      <div class="form-check form-check-inline">
+        <input class="form-check-input" type="radio" name="radios" id="validation-radios1" value="option1" required>
+        <label class="form-check-label" for="validation-radios1" id="radio1-label">CS 410P</label>
+      </div>
+      <div class="form-check form-check-inline">
+        <input class="form-check-input" type="radio" name="radios" id="validation-radios2" value="option2" required>
+        <label class="form-check-label" for="validation-radios2" id="radio2-label">CS 510</label>
+      </div>
+    </div>
+    <div class="form-group checkbox-group">
+      <label for="classSection" class="font-weight-bold col-form-label">
+        Have you taken any of these courses?
+      </label>
+      <div class="form-check">
+        <input class="required_group" type="checkbox" value="" id="validation-check1">
+        <label class="form-check-label" for="validation-check1" id="check1-label">Programming Languages</label>
+      </div>
+      <div class="form-check">
+        <input class="required_group" type="checkbox" value="" id="validation-check2" checked>
+        <label class="form-check-label" for="validation-check2" id="check2-label">Operating Systems</label>
+      </div>
+      <div class="form-check">
+        <input class="required_group" type="checkbox" value="" id="validation-check3" checked>
+        <label class="form-check-label" for="validation-check3" id="check3-label">Full Stack Web Development</label>
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="font-weight-bold" for="validation-textarea1">
+        What would you like to learn and accomplish in this class?
+      </label>
+      <textarea class="form-control" id="validation-textarea1" rows="3" required></textarea>
+    </div>
+    <div class="form-group">
+      <label class="font-weight-bold" for="validation-textarea2">
+        Do you have any project ideas?
+      </label>
+      <textarea class="form-control" id="validation-textarea2" rows="3" required></textarea>
+    </div>
+    <div class="form-group">
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" value="" id="validation-check4" checked required>
+        <label class="form-check-label" for="validation-check4">
+          I already have a group
+        </label>
+      </div>
+    </div>
+    <div class="form-group">
+      <div class="form-check form-check-inline">
+        <button type="submit" class="form-check-input btn btn-primary">Submit</button>
+        <button type="reset" class="form-check-input btn btn-secondary">Reset</button>
+      </div>
+    </div>
+  </form>
+</div>
+
+<script>
+// Example starter JavaScript for disabling form submissions if there are invalid fields
+(function() {
+  'use strict';
+  window.addEventListener('load', function() {
+    // Fetch all the forms we want to apply custom Bootstrap validation styles to
+    var forms = document.getElementsByClassName('needs-validation');
+    // Loop over them and prevent submission
+    var validation = Array.prototype.filter.call(forms, function(form) {
+      form.addEventListener('submit', function(event) {
+        function validateGrp() {
+          let things = document.querySelectorAll('.required_group')
+          let checked = 0;
+          for (let thing of things) {
+            thing.checked && checked++
+          }
+          if (checked) {
+            return true;
+          } else {
+            return false;
+          }
+        }
+        if (validateGrp() === false || form.checkValidity() === false) {
+          event.preventDefault();
+          event.stopPropagation();
+        }
+        else {
+          showAlert();
+
+        }
+          
+        form.classList.add('was-validated');
+      }, false);
+    
+    
+      form.addEventListener('reset', function(event) {
+        resetFields();
+      }, false);
+
+      function resetFields() {
+        document.getElementById('validation-inputName').value = '';
+        document.getElementById('validation-inputEmail3').value = '';
+          
+        document.getElementById('validation-registerStatus').value = 'Registered';
+        document.getElementById('validation-radios1').checked = false;
+        document.getElementById('validation-radios2').checked = false;
+        document.getElementById('validation-check1').checked = false;
+        document.getElementById('validation-check2').checked = true;
+        document.getElementById('validation-check3').checked = true;
+        document.getElementById('validation-textarea1').value = '';
+        document.getElementById('validation-textarea2').value = '';
+        document.getElementById('validation-check4').checked = true;
+      }
+
+      function showAlert(){
+        let name = document.getElementById('validation-inputName').value;
+        let email = document.getElementById('validation-inputEmail3').value;
+          
+        let status = document.getElementById('validation-registerStatus').value;
+        let section = '';
+        if( document.getElementById('validation-radios1').checked === true)
+          section += document.getElementById('radio1-label').innerHTML;
+        else
+          section += document.getElementById('radio2-label').innerHTML;
+          
+        let courses = '';
+        if (document.getElementById('validation-check1').checked === true)
+          courses = courses + document.getElementById('check1-label').innerHTML + ', ';
+        if (document.getElementById('validation-check2').checked === true)
+          courses = courses + document.getElementById('check2-label').innerHTML + ', ';
+        if (document.getElementById('validation-check3').checked === true)
+          courses += document.getElementById('check3-label').innerHTML + ', ';
+        
+        courses = courses.slice(0, -2);
+
+        let goals = document.getElementById('validation-textarea1').value;
+        let ideas = document.getElementById('validation-textarea2').value;
+          
+        let groupChk = '';
+        if (document.getElementById('validation-check4').checked === true)
+          groupChk += 'yes';
+        else
+          groupChk += 'no';
+          
+        alert(`
+          Name: ${name}
+          Email: ${email}
+          Registration Status: ${status}
+          Class Section: ${section}
+          Courses: ${courses}
+          Goals: ${goals}
+          Project ideas: ${ideas}
+          Group: ${groupChk}`);
+      }
+    });
+  }, false);
+})();
+</script>
+  
+</body>
+</html>
